@@ -68,7 +68,10 @@ function calculoPrecio() {
     // Aplicar IVA y impuesto al consumo
     const precioFinal = (precioConDescuento * (1 + (ivaPre / 100))) + impoConsu;
 
-   document.getElementById('resultadoPrecio').textContent = `El precio final es: ${precioFinal.toFixed(0)}`;
+    // Formatear el precio final con separador de miles
+    const precioFinalFormateado = new Intl.NumberFormat('es-ES').format(precioFinal.toFixed(0));
+
+    document.getElementById('resultadoPrecio').textContent = `El precio final es: ${precioFinalFormateado}`;
 }
 
 function limpiarFormularioPre() {
