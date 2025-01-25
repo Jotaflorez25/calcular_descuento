@@ -70,3 +70,8 @@ function calculoPrecio() {
 
     document.getElementById('resultadoPrecio').textContent = `El precio final es: ${precioFinal.toFixed(4)}`;
 }
+
+function limpiarFormularioPre() {
+    document.getElementById('discountForm').reset();
+    document.getElementById('resultadoPrecio').textContent = '';
+}
