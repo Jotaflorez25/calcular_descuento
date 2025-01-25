@@ -71,7 +71,7 @@ function calculoPrecio() {
     // Formatear el precio final con separadores de miles y punto decimal
     const precioFinalFormateado = new Intl.NumberFormat('en-US').format(precioFinal);
 
-    document.getElementById('resultadoPrecio').textContent = `El precio final es: ${precioFinalFormateado}`;
+    document.getElementById('resultadoPrecio').textContent = `El precio final es: ${precioFinalFormateado.toFixed(0)}`;
 }
 
 function limpiarFormularioPre() {
