@@ -72,6 +72,6 @@ function calculoPrecio() {
 }
 
 function limpiarFormularioPre() {
-    document.getElementById('discountForm').reset();
+    document.getElementById('precioForm').reset();
     document.getElementById('resultadoPrecio').textContent = '';
 }
