@@ -22,12 +22,14 @@
             <label for="impoConsu">Impuesto al Consumo:</label>
             <input type="number" id="impoConsu" name="impoConsu" value="0" min="0" required>
 
+            <div id="resultadoPrecio" class="resultado"></div>
+
             <button type="button" onclick="calculoPrecio()">Calcular Precio Final</button>
             <button type="button" onclick="limpiarFormularioPre()">Limpiar</button>
             <button type="button"  onclick="window.location.href='menu.html'">Regresar el Menú Principal</button>
         </form>
 
-        <div id="resultadoPrecio" class="resultado"></div>
+        
     </div>
 
     <script src="app.js"></script>
