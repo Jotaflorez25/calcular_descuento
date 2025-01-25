@@ -69,7 +69,7 @@ function calculoPrecio() {
     const precioFinal = (precioConDescuento * (1 + (ivaPre / 100))) + impoConsu;
 
     // Formatear el precio final con separadores de miles y punto decimal
-    const precioFinalFormateado = new Intl.NumberFormat('eu-EU').format(precioFinal);
+    const precioFinalFormateado = new Intl.NumberFormat('en-US').format(precioFinal);
 
     document.getElementById('resultadoPrecio').textContent = `El precio final es: ${precioFinalFormateado}`;
 }
