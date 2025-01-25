@@ -34,7 +34,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const password = document.getElementById('password').value;
 
     if (usuarios[username] && usuarios[username] === password) {
-        window.location.href = 'calculoDescuento.html';
+        window.location.href = 'menu.html';
     } else {
         document.getElementById('error').textContent = 'Usuario o contraseña incorrectos';
     }
