@@ -54,3 +54,19 @@ function limpiarFormulario() {
     document.getElementById('discountForm').reset();
     document.getElementById('resultado').textContent = '';
 }
+
+function calculoPrecio() {
+    const precioBase = parseFloat(document.getElementById('precioBase').value);
+    const ivaPre = parseFloat(document.getElementById('ivaPre').value);
+    const porDto = parseFloat(document.getElementById('porDto').value);
+    const impoConsu = parseFloat(document.getElementById('impoConsu').value);
+
+    // Calcular el precio final después del descuento y el IVA
+    const descuento = (precioBase * (porDto / 100));
+    const precioConDescuento = precioBase - descuento;
+    
+    // Aplicar IVA y impuesto al consumo
+    const precioFinal = (precioConDescuento * (1 + (ivaPre / 100))) + impoConsu;
+
+    document.getElementById('resultadoPrecio').textContent = `El precio final es: ${precioFinal.toFixed(4)}`;
+}
