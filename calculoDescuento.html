@@ -18,12 +18,14 @@
             <input type="number" id="iva" name="iva" value="0" min="0" required margin="center">
             <label for="impuestoConsumo">Impuesto al Consumo:</label>
             <input type="number" id="impuestoConsumo" name="impuestoConsumo" value="0" min="0" required margin="center">
+	    <div></div>
+            <div id="resultado" class="resultado"></div>
+	    <div></div>
             <button type="button" onclick="calcularDescuento()">Calcular</button>
             <button type="button" onclick="limpiarFormulario()">Limpiar</button>
 	    <button type="button"  onclick="window.location.href='menu.html'">Regresar el Menú Principal</button>
         </form>
-		<div></div>
-        <div id="resultado" class="resultado"></div>
+	
     </div>
     <script src="app.js"></script>
 </body>
