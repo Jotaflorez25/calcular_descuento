@@ -64,14 +64,16 @@ function calculoPrecio() {
     // Calcular el precio final después del descuento y el IVA
     const descuento = (precioBase * (porDto / 100));
     const precioConDescuento = precioBase - descuento;
-
+    
     // Aplicar IVA y impuesto al consumo
     const precioFinal = (precioConDescuento * (1 + (ivaPre / 100))) + impoConsu;
 
-    // Formatear el precio final con separador de miles
-    const precioFinalFormateado = new Intl.NumberFormat('es-ES').format(precioFinal.toFixed(0));
+    // Formatear el precio final con separadores de miles y punto decimal
+    const precioFinalFormateado = new Intl.NumberFormat('es-ES', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+    }).format(precioFinal);
 
-    // Mostrar el resultado en el elemento HTML
     document.getElementById('resultadoPrecio').textContent = `El precio final es: ${precioFinalFormateado}`;
 }
 
