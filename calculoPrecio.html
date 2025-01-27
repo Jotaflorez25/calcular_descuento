@@ -10,13 +10,13 @@
     <div class="precio-container">
         <h2>Cálculo de Precio</h2>
         <form id="precioForm">
-            <label for="precioBase">Precio Base:</label>
+            <label for="precioBase">Precio Base del Sistema:</label>
             <input type="number" id="precioBase" name="precioBase" value="0" min="0" required>
 
             <label for="ivaPre">IVA (%):</label>
             <input type="number" id="ivaPre" name="ivaPre" value="0" min="0" required>
 
-            <label for="porDto">Porcentaje Descuento (%):</label>
+            <label for="porDto">Porcentaje Descuento(00.00%):</label>
             <input type="number" id="porDto" name="porDto" value="0" min="0" required>
 
             <label for="impoConsu">Impuesto al Consumo:</label>
@@ -24,7 +24,7 @@
             <div></div>
             <div id="resultadoPrecio" class="resultado"></div>
             <div></div>
-            <button type="button" onclick="calculoPrecio()">Calcular Precio Final</button>
+            <button type="button" onclick="calculoPrecio()">Calcular Precio</button>
             <button type="button" onclick="limpiarFormularioPre()">Limpiar</button>
             <button type="button"  onclick="window.location.href='menu.html'">Regresar el Menú Principal</button>
         </form>
